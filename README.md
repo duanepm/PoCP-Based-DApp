@@ -4,6 +4,8 @@
 
 ## 📌 Project Overview
 
+![Web UI](assets/DApp.png)
+
 This project introduces a novel consensus mechanism: **Proof of Computational Power (PoCP)** — an energy-efficient, fair, and decentralized alternative to traditional blockchain consensus models like Proof of Work (PoW) and Proof of Stake (PoS).
 
 PoCP selects validators based on real-time computational performance rather than financial stake or brute-force mining. It integrates:
