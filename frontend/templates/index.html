@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PoCP Blockchain</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="mb-4 text-center title-heading">Proof of Computational Power (PoCP)</h1>
+    <h3 style="text-align: center; color: white;">Submitted by Duane Chembakassery (22BCE1722)
+    </h3>
+    <div class="row g-4">
+      <!-- Miner Registration -->
+      <div class="col-md-4">
+        <div class="section-card">
+          <h4>1️⃣ Register Miner</h4>
+          <form id="registerForm">
+            <div class="mb-3">
+              <label for="hardhatAddressDropdown" class="form-label">Select Miner Address</label>
+              <select id="hardhatAddressDropdown" class="form-select" required>
+                <option value="" disabled selected>Choose an address</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Register</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- CP Mining + Reset Round -->
+      <div class="col-md-4">
+        <div class="section-card">
+          <h4>2️⃣ CP Calculation</h4>
+          <form id="startMiningForm" class="mb-3 text-center">
+            <button class="btn btn-danger w-100">🚀 Start New Mining Round</button>
+          </form>
+
+          <form id="miningForm">
+            <div class="mb-3">
+              <label for="selectedMiner" class="form-label">Select Miner</label>
+              <select class="form-select" id="selectedMiner" required></select>
+            </div>
+            <p class="timer-display" id="timerDisplay">⏱️ 00:00.000</p>
+            <button type="button" class="btn btn-success w-100 mb-2" onclick="startTimer()">Start Mining</button>
+            <button type="submit" class="btn btn-warning w-100">Submit Time</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Validator Selection -->
+      <div class="col-md-4">
+        <div class="section-card">
+          <h4>3️⃣ Select Validator</h4>
+          <form id="validatorForm">
+            <button type="submit" class="btn btn-info w-100">Select Validator</button>
+          </form>
+          <div id="validatorResult" class="mt-3 text-success fw-bold"></div>
+        </div>
+      </div>
+    </div> <!-- End row -->
+
+    <!-- Leaderboard -->
+    <div class="leaderboard section-card mt-5">
+      <h4>🏆 Leaderboard</h4>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Miner Address</th>
+            <th>Time Taken (s)</th>
+            <th>CP</th>
+          </tr>
+        </thead>
+        <tbody id="leaderboardTable"></tbody>
+      </table>
+    </div>
+
+    <!-- Rewards Table -->
+    <div class="section-card mt-4">
+      <h4>💰 Miner Rewards</h4>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Miner Address</th>
+            <th>Total Rewards</th>
+          </tr>
+        </thead>
+        <tbody id="rewardsTable"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
