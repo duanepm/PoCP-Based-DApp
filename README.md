@@ -67,7 +67,7 @@ Where:
 
 ### 🎯 Validator Selection (Probabilistic):
 
-$P(i) = \frac{\text{CP}_i}{\sum_{j=1}^{n} \text{CP}_j}$
+**P(i)** = CPᵢ / Σ(CPⱼ) for j = 1 to n
 One validator is chosen using weighted random selection.
 
 ### 🏅 Reward Logic:
