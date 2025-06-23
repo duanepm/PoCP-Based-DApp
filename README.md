@@ -168,14 +168,6 @@ Navigate to: `http://127.0.0.1:5000`
 
 ---
 
-## 👨‍💻 Author
-
-**Duane Chembakassery**
-VIT Chennai – B.Tech CSE
-Roll No: 22BCE1722
-
----
-
 ## 📚 References
 
 * Nakamoto, S. (2008). [Bitcoin Whitepaper](https://bitcoin.org/bitcoin.pdf)
